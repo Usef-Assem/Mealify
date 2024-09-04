@@ -1,0 +1,395 @@
+:root {
+    --section-font-family:"Amatic sc" , sans-serif;
+}
+    
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+    margin: 0%;
+    padding: 0%;
+}
+.section-color {
+    background-color: #EEEEEE;
+}
+
+nav {
+    background-color: #FFFFFF;
+}
+.logo {
+    font-size: 30px;
+    color: #212529;
+    font-weight: 700;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: relative;
+}
+
+.logo::after {
+    content: "";
+    position: absolute;
+    top: 60%;
+    width: 7px;
+    height: 7px;
+    border-radius: 100vh;
+    background-color: #CE1212;
+}
+
+nav ul li a {
+    font-size: 17px !important;
+    font-weight: 600 !important;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+    position: relative;
+}
+
+nav ul li a::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #CE1212;
+    left: 0;
+    bottom: -2px;
+    transition: width 0.5s;
+}
+
+nav ul li a:hover::before {
+    width: 100%;
+}
+
+.active {
+    color: #000000 !important;
+}
+nav ul li a.active::before {
+    width: 100%;
+  }
+
+.navbar-toggler{
+    border: none !important;
+}
+
+  @media (max-width: 991px) {
+    nav ul li a::before {
+      display: none;
+    }
+  }
+
+  /* header styling */
+
+.header-content h2 {
+    color: #37373F;
+    font-size: 65px;
+    font-weight: 700;
+    font-family: var(--section-font-family);
+}
+
+.header-content p {
+    color: #4F4F5A;
+    font-size: "16px";
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.container picture {
+    filter: drop-shadow(0px 0px 10px #006);
+}
+
+.btn-main {
+    background-color: hsl( 0, 84%, 44% );
+    color: white;
+    border-radius: 0px 100vh 100vh;
+    font-size: 15px;
+    transition: background-color 0.3s;
+}
+
+.btn-main:hover {
+    background-color: #E61414;
+}
+
+.font-style {
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.font-style:hover {
+    color:#CE1212;  
+}
+
+.icon {
+    width: 55px;
+    height: 55px;
+    background-image: linear-gradient(to right , hsl( 0, 84%, 44% ) 0% 50% , transparent 50% 100%);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.icon::before {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+
+
+/* Define the vibration animation */
+@keyframes vibrate {
+    0% { transform: translate(0px, 0px); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(2px, -2px); }
+    60% { transform: translate(-2px, -2px); }
+    80% { transform: translate(2px, 2px); }
+    100% { transform: translate(0px, 0px); }
+}
+
+header picture:hover img {
+    animation: vibrate 0.5s infinite;
+}
+
+    /* Chefs Styling */
+
+    .Chefs-content h5 {
+        font-size: 14px;
+        color: #7F7F90;
+        font-family: "inter";
+    }
+
+    .Chefs-content p {
+        font-family: var(--section-font-family);
+        font-size: 50px;
+        color: #212529;
+    }
+
+    .Chefs-content p span {
+        font-family: inherit;
+        font-size: inherit;
+        color: #CE1212;
+    }
+    .card h3 {
+        color:#212529;
+        font-size: 18.72px;
+        font-weight: 700;
+        font-family: "inter";
+    }
+
+    .card span {
+        color: #7F7F90;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    .card p {
+        color:#7F7F90;
+        font-size: 15px;
+        font-style: italic;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    .card {
+        position: relative;
+        overflow: hidden;
+        -webkit-box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.15);
+        -moz-box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.15);
+        box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.15);
+        border: none;
+        transition: scale 0.4s;
+    }
+    .card:hover .social-media {
+        right: 3%;
+        transition: right 0.6s 0.5s;
+    }
+    .card:hover {
+        scale: 1.08;
+    }
+
+    .social-media {
+        position: absolute;
+        top: 5%;
+        right: -11%;
+        width: 10%;
+        background: #CDC2B8;
+        border-radius: 5%;
+        transition: right 0.3s;
+    }
+
+    .social-media i {
+        color: #37373f66;
+        transition: color 0.4s;
+    }
+    .social-media i:hover {
+        color: #37373fe6;
+    }
+
+    /* Gallery styling */
+
+.gallery picture {
+    position: relative;
+    border: 5px solid white ;
+    overflow: hidden;
+}
+.gallery picture:hover .layer {
+    top: 0;
+}
+
+.gallery picture:hover img {
+   scale: 1.1;
+}
+
+.gallery img {
+    transition: scale 0.4s;
+}
+
+
+.gallery-content p {
+    font-family: var(--section-font-family);
+    font-size: 50px;
+    color: #212529;
+}
+
+.gallery-content p span {
+    font-family: inherit;
+    font-size: inherit;
+    color: #CE1212;
+}
+
+.gallery-content h5 {
+    font-size: 14px;
+    color: #7F7F90;
+    font-family: "inter";
+}
+
+.gallery .layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 150%;
+    left: 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #00000096;
+    transition: top 0.4s;
+}
+
+/* Contact us Styling */
+
+.contact h5 {
+    font-size: 14px;
+    color: #7F7F90;
+    font-family: "inter";
+}
+
+.contact-content p {
+    font-family: var(--section-font-family);
+    font-size: 50px;
+    color: #212529;
+}
+
+.contact p span {
+    font-family: inherit;
+    font-size: inherit;
+    color: #CE1212;
+}
+
+.details i {
+    width: 50px;
+    height: 50px;
+    background-color: #CE1212;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.details h3 {
+    color: #7D7D7D;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: inter, sans-serif;
+}
+
+
+/* .details .email , .phone , .opening-hours {
+    padding: 20px 0px;
+} */
+
+.input-groups input {
+    width: 49%;
+}
+
+.btn-form {
+    background-color: hsl( 0, 84%, 44% );
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 100vh;
+    font-size: 15px;
+}
+form {
+    width: 84.5%;
+    -webkit-box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.10);
+    -moz-box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.10);
+    box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.10);
+    border-radius: 8px;
+}
+
+/* footer  Styling */
+.about img {
+    width: 10%;
+}
+
+.about h3 {
+    font-size: 18.72px;
+    font-weight: 700;
+    position: relative;
+    border-bottom: solid gray 2px;
+}
+
+.about h2 {
+    position: relative;
+}
+
+.about h2::after {
+    content: "";
+    position: absolute;
+    top: 65%;
+    width: 7px;
+    height: 7px;
+    border-radius: 100vh;
+    background-color: #CE1212;
+}
+
+footer {
+    background-image: linear-gradient(#0009 , #0009) , 
+    url(../assets/textured-metal-background.jpg);
+    color: #fff;
+    background-size: contain;
+    box-shadow: 0px -1px 5px #0007;
+}
+.subscriptipn-group button {
+    background-color: hsl( 0, 84%, 44% );
+    color: white;
+    border: none;
+    padding: 9.5px;
+}
+.links li {
+    transition: all 0.3s;
+    cursor: pointer;
+}
+.links li:hover {
+    margin: 0px 7px 0px;
+    background-color: rgba(238, 238, 238, 0.208);
+}
+
